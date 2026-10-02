@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #333;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#addTaskBtn,
+#loadSamplesBtn {
+    background: #333;
+    color: white;
+}
+
+#taskMessage {
+    min-height: 24px;
+    color: #c0392b;
+    margin-bottom: 10px;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.summary div {
+    flex: 1;
+    padding: 15px;
+    background: #f1f3f5;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.summary strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.summary span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#taskList {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.task-text {
+    flex: 1;
+    word-break: break-word;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.complete-btn {
+    background: #3498db;
+    color: white;
+}
+
+.edit-btn {
+    background: #f39c12;
+    color: white;
+}
+
+.remove-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+.edit-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+@media (max-width: 650px) {
+    .task-form {
+        flex-direction: column;
+    }
+
+    .summary {
+        flex-direction: column;
+    }
+
+    .task-item {
+        flex-wrap: wrap;
+    }
+}
